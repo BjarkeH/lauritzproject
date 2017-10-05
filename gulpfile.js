@@ -80,14 +80,20 @@ gulp.task("watch", ()=> {
 
 gulp.task("clean:dist", ()=> {
   return del("./dist/*");
-})
+});
 
 gulp.task("copy:images", ()=> {
   return gulp
     .src("./src/Images/**/*")
     .pipe(gulp.dest("./dist/assets/images/"))
-})
+});
 
-gulp.task("default", ["copy:html:index", "copy:html", "compile:sass", "vendors", "scripts", "webserver", "watch"], ()=> {
+gulp.task("copy:fonts", ()=> {
+  return gulp
+    .src("./node_modules/bootstrap-sass/assets/fonts/bootstrap/*")
+    .pipe(gulp.dest("./dist/assets/fonts/bootstrap/"));
+});
+
+gulp.task("default", ["copy:html:index", "copy:html", "compile:sass", "vendors", "scripts", "copy:images", "copy:fonts", "webserver", "watch"], ()=> {
 
 })

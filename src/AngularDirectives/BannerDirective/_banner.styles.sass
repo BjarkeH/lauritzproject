@@ -23,9 +23,11 @@
     position: absolute
     top: 0
     left: 0
-    // background: linear-gradient(to right, rgba(51,0,0,0.7) ,rgba(255,255,255,0.7))
-    // background: linear-gradient(to right, rgba(51,0,0,0.7) ,darken(rgba(51,0,0,0.7), 5%))
-    background: linear-gradient(to right, rgba(20, 30, 48, 0.7) ,rgba(36, 59, 85,0.7))
+    // background: linear-gradient(to right, rgba(51,0,0,0.7) ,rgba(255,255,255,0.7)) // not going to happen
+    // background: linear-gradient(to right, rgba(51,0,0,0.7) ,darken(rgba(51,0,0,0.7), 5%)) // Red'ish
+    // background: linear-gradient(to right, rgba(20, 30, 48, 0.9) ,rgba(36, 59, 85,0.9)) // Blue'ish
+    // background: linear-gradient(to right, rgba(43, 192, 228, 0.9) , rgba(234, 236, 198, 0.9)) // Ocean sandy
+    background: linear-gradient(to right, rgba(189, 195, 199, 0.9) , rgba(44, 62, 80, 0.9)) // gray'ish
 
 
   &--has-fixed-header
@@ -36,6 +38,8 @@
     margin-bottom: 40px
     text-align: center
     text-transform: uppercase
+    color: white
+    // color: #333
 
     @media screen and (max-width: 720px)
       font-size: 22px
@@ -47,6 +51,10 @@
         height: 5px 
         background: $brand-primary
         background: #06517F
+        background: #ff9242
+        background: rgba(43, 192, 228, 1)
+        background: rgba(234, 236, 198, 1)
+        background: #c90734
 
         &:nth-child(1)
           margin-right: 20px
@@ -54,7 +62,9 @@
           margin-left: 20px
 
       &__keyword
-        color: #141E30
+        color: #ff9242
+        color: #fff
+        // color: #333
 
   .search-field
     &__input
@@ -74,12 +84,15 @@
         font-size: 16px 
 
   .thumbnail    
-    border-width: 5px
-    border-top-color: #ff9242
-    border-left-color: #ff9242 
-    border-bottom-color: #141E30
-    border-right-color: #141E30
+    // borders-width: 5px
+    // border-top-color: #ff9242
+    // border-left-color: #ff9242 
+    // border-bottom-color: #141E30
+    // border-right-color: #141E30
     padding: 10px 20px 50px 20px
+    background: none
+    border: none
+    // box-shadow: 0 20px 18px -18px rgba(0,0,0,0.5)
 
     .caption
       padding: 0px      

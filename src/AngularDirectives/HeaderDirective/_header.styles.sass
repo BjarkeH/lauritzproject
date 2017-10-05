@@ -1,0 +1,35 @@
+.header
+  background: darken($brand-primary, 10%)
+  background: #000
+  height: 80px
+  line-height: 80px
+  position: fixed
+  width: 100%
+  z-index: 1000
+  // border-bottom: 1px solid white
+
+
+  ul
+    float: right
+    padding: 0px
+    margin: 0px
+    list-style: none
+
+    li
+      float: left
+      margin-left: 15px
+
+      a
+        color: darken(#ddd, 10%)
+        font-size: 17px
+        transition: all 0.3s linear
+
+        &:hover
+          text-decoration: none
+          color: white
+
+        &:link
+          text-decoration: none
+
+        &:active
+          text-decoration: none

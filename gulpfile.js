@@ -6,10 +6,11 @@ const concat = require("gulp-concat");
 const jade = require("gulp-jade");
 const flatten = require("gulp-flatten");
 const del = require("del");
+const autoprefixer = require('gulp-autoprefixer');
 //** NOTES **/
 // Remember to add lauritz.com to hosts
 // path C:\Windows\System32\drivers\etc\hosts
-// I.E              127.0.0.1       sporti.one
+// I.E              127.0.0.1       lauritz.com
 
 // Webserver at http://lauritz.com:80
 gulp.task("webserver", ()=> {
@@ -27,6 +28,7 @@ gulp.task("compile:sass", ()=> {
     .pipe(sass({
       outputStyle: "expanded"      
     }))
+    .pipe(autoprefixer())
     .pipe(flatten())
     .pipe(connect.reload())
     .pipe(gulp.dest("./dist/assets/css/"));

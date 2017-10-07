@@ -1,4 +1,4 @@
-app.directive("headerDirective", function(){
+app.directive("headerDirective", ['$rootScope', function($rootScope){
   return {
     restrict: 'AEC',
     replace: true,
@@ -8,4 +8,4 @@ app.directive("headerDirective", function(){
       $scope.pageTitle = SITE_NAME;
     }
   }
-});
+}]);

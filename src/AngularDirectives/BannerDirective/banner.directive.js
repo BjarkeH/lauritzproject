@@ -5,8 +5,7 @@ app.directive("bannerDirective", function(){
     templateUrl: DOMAIN_NAME + "/templates/banner.template.html",
     link: function($scope, el, attrs){      
 
-      $scope.randomImage;
-
+      $scope.randomImage;      
 
       $scope.images = [
         "./assets/images/cameras-691843_1920.jpg",

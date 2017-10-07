@@ -5,8 +5,8 @@
   // height: 60vh
   // min-height: 600px
   padding:
-    top: 150px
-    bottom: 150px
+    top: 100px
+    bottom: 100px
   background:
     // image: url("./../../assets/images/cameras-691843_1920.jpg")
     position: center
@@ -24,17 +24,18 @@
     top: 0
     left: 0
     // background: linear-gradient(to right, rgba(51,0,0,0.7) ,rgba(255,255,255,0.7)) // not going to happen
-    // background: linear-gradient(to right, rgba(51,0,0,0.7) ,darken(rgba(51,0,0,0.7), 5%)) // Red'ish
+    background: linear-gradient(to right, rgba(51,0,0,0.7) ,darken(rgba(51,0,0,0.7), 5%)) // Red'ish
     // background: linear-gradient(to right, rgba(20, 30, 48, 0.9) ,rgba(36, 59, 85,0.9)) // Blue'ish
     // background: linear-gradient(to right, rgba(43, 192, 228, 0.9) , rgba(234, 236, 198, 0.9)) // Ocean sandy
-    background: linear-gradient(to right, rgba(189, 195, 199, 0.9) , rgba(44, 62, 80, 0.9)) // gray'ish
+    // background: linear-gradient(to right, rgba(189, 195, 199, 0.9) , rgba(44, 62, 80, 0.9)) // gray'ish
+    // background: linear-gradient(to right, rgba(221, 94, 137, 0.7) , rgba(247, 187, 151, 0.7)) // pinky
 
 
   &--has-fixed-header
     margin-top: 80px
 
   &__main-title
-    font-size: 37px
+    font-size: 40px
     margin-bottom: 40px
     text-align: center
     text-transform: uppercase
@@ -42,7 +43,7 @@
     // color: #333
 
     @media screen and (max-width: 720px)
-      font-size: 22px
+      font-size: 30px
 
     .design
       &__line
@@ -79,6 +80,17 @@
     &__action
       font-size: 25px       
       min-height: 50px 
+      background: #ca0634
+      border-color: darken(#ca0634, 10%)
+
+      &:hover
+        background: darken(#ca0634, 10%)
+
+      &:active
+        border-color: darken(#ca0634, 10%)
+
+      &:focus
+        -webkit-appearance: none
 
       @media screen and (max-width:720px)
         font-size: 16px 
@@ -89,10 +101,38 @@
     // border-left-color: #ff9242 
     // border-bottom-color: #141E30
     // border-right-color: #141E30
-    padding: 10px 20px 50px 20px
+    padding: 10px 20px 0px 20px
     background: none
     border: none
+    margin-bottom: 0px
     // box-shadow: 0 20px 18px -18px rgba(0,0,0,0.5)
 
+    &--categories
+      .content
+        padding: 20px 12px  
+        background: white
+        border-radius: 4px
+        border: 1px solid #ca0634
+
+        &__heading
+          text-transform: uppercase
+          margin-bottom: 10px
+          font:
+            weight: bold
+            size: 14px
+
+      h2
+        margin: 0px
+
     .caption
-      padding: 0px      
+      padding: -1px     
+
+.checkbox
+  position: relative
+  label
+    position: relative
+    font-size: 16px
+  input
+    margin-left: 0px !important
+    top: 1px
+    left: 0

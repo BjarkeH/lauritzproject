@@ -1,5 +1,6 @@
 .header
-  background: darken($brand-primary, 10%)
+  // background: darken($brand-primary, 0%)
+  // background: #ccc
   background: #000
   height: 80px
   line-height: 80px
@@ -19,14 +20,18 @@
       float: left
       margin-left: 15px
 
+      &:hover 
+        text-decoration: underline
+
       a
         color: darken(#ddd, 10%)
         font-size: 17px
-        transition: all 0.2s linear
+        // transition: all 0.2s linear
 
         &:hover
-          text-decoration: none
+          // text-decoration: underline
           color: white
+          color: #ca0634
 
         &:link
           text-decoration: none
